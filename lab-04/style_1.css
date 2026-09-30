@@ -1,0 +1,47 @@
+/* Універсальний селектор для всього контенту */
+* {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 40px; /* інтервал між текстом (міжрядковий) */
+}
+
+/* Селектор тегів */
+p {
+    color: green;
+    text-align: center;
+}
+
+div {
+    text-align: justify;
+}
+
+/* Селектори класів */
+.red-text {
+    color: red;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.text-shadow {
+    /* горизонтальне 5px, вертикальне -5px, розмиття 3px, колір синій */
+    text-shadow: 5px -5px 3px #0056b3; 
+}
+
+.block-first {
+    text-decoration: line-through;
+    text-transform: uppercase;
+    text-indent: 50px;
+}
+
+.block-second {
+    letter-spacing: 30px;
+    word-spacing: 50px;
+}
+
+/* Селектор ідентифікатора */
+#italic-bold {
+    font-style: italic;
+    font-weight: bold;
+}

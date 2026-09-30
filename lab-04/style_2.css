@@ -1,0 +1,21 @@
+/* Селектор тегу */
+p {
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    color: #333333;
+}
+
+/* Селектор класу */
+.intro-text {
+    font-weight: 500;
+    color: #4a90e2;
+    text-indent: 30px;
+}
+
+/* Селектор ідентифікатора */
+#main-title {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2c3e50;
+}
