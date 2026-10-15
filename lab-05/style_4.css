@@ -1,0 +1,70 @@
+/* --- СТИЛІЗАЦІЯ ГРАДІЄНТНИХ БЛОКІВ (ЗАВДАННЯ 4) --- */
+
+/* Контейнер для вирівнювання блоків на сторінці */
+.gradient-gallery {
+    margin: 40px auto;
+    max-width: 1400px;
+    text-align: center;
+}
+
+/* Загальні вимоги для всіх чотирьох блоків */
+.gradient-gallery > div {
+    display: inline-block;        /* Розташування блоків в один ряд */
+    width: 300px;                 /* Фіксована ширина */
+    height: 200px;                /* Фіксована висота */
+    margin: 20px;                 /* Зовнішній відступ між блоками */
+    padding: 15px;                /* Внутрішній відступ для підпису */
+    box-sizing: border-box;       /* Розміри не збільшуються від padding */
+    vertical-align: top;
+    
+    /* Оформлення тексту всередині блоків */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Тінь для кращої читаємості на будь-якому фоні */
+    border-radius: 4px;           /* Легке закруглення кутів */
+}
+
+/* --- БЛОК 1: Діагональні смуги --- */
+.gradient-gallery > div:nth-of-type(1) {
+    background-image: linear-gradient(
+        45deg,
+        #00a8ff 25%,
+        #007cb5 25%,
+        #007cb5 50%,
+        #00a8ff 50%,
+        #00a8ff 75%,
+        #007cb5 75%,
+        #007cb5 100%
+    );
+    background-size: 40px 40px;
+}
+
+/* --- БЛОК 2: Фон у вигляді клітинок --- */
+.gradient-gallery > div:nth-of-type(2) {
+    background-image: 
+        linear-gradient(transparent 50%, rgba(0, 168, 255, 0.3) 50%),
+        linear-gradient(90deg, rgba(0, 168, 255, 0.3) 50%, transparent 50%);
+    background-color: #004b6e; /* Основний затінений синій колір під клітинкою */
+    background-size: 30px 30px;
+}
+
+/* --- БЛОК 3: Радіальний градієнт з початковою точкою --- */
+.gradient-gallery > div:nth-of-type(3) {
+    background-image: radial-gradient(
+        circle farthest-corner at 30px 20px,
+        #00d2ff 10%,
+        #00a8ff 50%,
+        #004b6e 90%
+    );
+}
+
+/* --- БЛОК 4: Два фони одночасно з напівпрозорим накладанням --- */
+.gradient-gallery > div:nth-of-type(4) {
+    background-color: #00a8ff; /* Суцільний колір блоку */
+    background-image: linear-gradient(to top, rgba(0, 75, 110, 0.8), transparent);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 50%; /* Ширина 100%, висота 50% */
+}

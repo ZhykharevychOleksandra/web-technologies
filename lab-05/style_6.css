@@ -1,0 +1,166 @@
+/* ЗАВДАННЯ 6: САЙТ-ВІЗИТІВКА З ФОНОВИМИ ЗОБРАЖЕННЯМИ */
+
+/* Фон всієї сторінки (body) за заготовкою та ТЗ */
+body {
+    background-color: #1b2a41; /* Запасний колір фону на час завантаження картинки */
+    background-image: url('photo/image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; /* Зображення залишається нерухомим при скролі */
+    margin: 0;
+    padding: 0;
+}
+
+/* Головний контейнер (main) */
+.container {
+    box-sizing: border-box;
+    max-width: 900px;
+    min-width: 320px;
+    margin: 40px auto; /* Центрування по горизонталі за допомогою auto */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85); /* Напівпрозорий білий фон */
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+    
+    /* 
+       ПОЯСНЕННЯ ДО КОНТЕЙНЕРА:
+       Коли вікно браузера стає вужчим за 320px (значення min-width), контейнер перестане 
+       стискатися далі. Замість адаптивного зменшення у вікні браузера з'явиться нижня 
+       горизонтальна смуга прокручування (horizontal scrollbar), що дозволить користувачеві 
+       прокручувати сторінку вбік, щоб побачити обрізану частину вмісту сайту.
+    */
+}
+
+/* Стилізація внутрішніх розділів */
+.container h1 { text-align: center; color: #1b2a41; }
+.container > p { text-align: center; margin-bottom: 30px; font-style: italic; }
+section { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px dashed #ccc; }
+section h2 { color: #1b2a41; font-size: 20px; margin-bottom: 15px; }
+
+
+/* === 1. Блок «Теги» (display) === */
+.inline-div {
+    display: inline; /* Перетворення блочного тегу на рядковий */
+    width: 200px;    /* НЕ ДІЄ */
+    height: 100px;   /* НЕ ДІЄ */
+    background-color: #2c3e50;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    
+    /* 
+       ПОЯСНЕННЯ ЩОДО DISPLAY: INLINE:
+       Властивості width (ширина) та height (висота) не діють на елементи із типом відображення 
+       display: inline (рядкові елементи). За стандартами CSS, розміри рядкових об'єктів 
+       обчислюються автоматично виключно на основі обсягу їхнього внутрішнього контенту (тексту).
+    */
+}
+
+.span-wrapper {
+    margin-top: 20px;
+}
+
+.block-span {
+    display: block;  /* Перетворення рядкового тегу на блочний */
+    width: 150px;    /* ДІЄ */
+    background-color: #7f8c8d;
+    color: white;
+    padding: 8px;
+    margin-bottom: 5px;
+    text-align: center;
+    /* Оскільки вони стали блочними (display: block), вони автоматично вишикувалися в стовпчик */
+}
+
+
+/* === 2. Блок «Повторення фону» (background-repeat) === */
+.section-repeat > div {
+    display: inline-block;
+    width: 180px;
+    height: 200px;
+    margin: 10px;
+    background-image: url('photo/pattern.jpg'); /* Маленька іконка 60x60px */
+    background-color: #dfe6e9;
+    border: 1px solid #b2bec3;
+    vertical-align: top;
+    padding: 10px;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.repeat-x { background-repeat: repeat-x; }
+.repeat-y { background-repeat: repeat-y; }
+.repeat-space { background-repeat: space; }
+.repeat-round { background-repeat: round; }
+
+/* 
+   ПОЯСНЕННЯ РІЗНИЦІ МІЖ SPACE ТА ROUND:
+   - space: Повторює зображення стільки разів, скільки повністю поміщається в області блоку. 
+     Якщо залишається порожній простір, картинки НЕ обрізаються і НЕ стискаються, а цей залишок 
+     рівномірно розподіляється як порожні проміжки (відступи) між сусідніми зображеннями.
+   - round: Також намагається вмістити цілу кількість картинок в область, але якщо є залишок, 
+     воно автоматично масштабує (розтягує або стискає) зображення так, щоб вони повністю 
+     заповнили блок без жодних порожніх проміжків і без обрізання країв.
+*/
+
+
+/* === 3. Блок «Масштабування» (background-size) === */
+.section-size > div {
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin: 15px;
+    border: 2px solid #2c3e50;
+    background-image: url('photo/image.jpg'); /* Використовуємо ту саму картинку */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    box-sizing: border-box;
+    text-shadow: 1px 1px 3px black;
+    vertical-align: top;
+}
+
+/* Масштабує, щоб картинка повністю влізла в блок, зберігаючи пропорції */
+.size-contain { background-size: contain; }
+
+/* Масштабує, щоб повністю заповнити область блоку, частина зображення може обрізатися */
+.size-cover { background-size: cover; }
+
+
+/* === 4. Блок «Прокручування фону» (background-attachment) === */
+.section-attachment > div {
+    display: inline-block;
+    width: 400px;
+    max-height: 150px;
+    overflow: auto; /* Додає смугу прокручування при переповненні за умовою */
+    margin: 10px;
+    border: 1px solid #7f8c8d;
+    background-image: url('photo/pattern.jpg');
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #f5f6fa;
+    vertical-align: top;
+}
+
+.section-attachment h3 { margin-top: 0; font-size: 16px; color: #2c3e50; }
+.section-attachment p { font-size: 14px; line-height: 1.6; }
+
+/* Фон зафіксований відносно самого блоку і не рухається разом із текстом */
+.attach-scroll { background-attachment: scroll; }
+
+/* Фон прикріплений до контенту і скролиться разом із текстом */
+.attach-local { background-attachment: local; }
+
+/* 
+   ПОЯСНЕННЯ ЩОДО ПРОКРУЧУВАННЯ ВНУТРІШНЬОГО ФОНУ:
+   - background-attachment: scroll: Фонова картинка фіксується відносно кордонів самого елемента 
+     (тегу div). Коли користувач крутить коліщатко миші всередині блоку і прокручує текст, 
+     фон залишається абсолютно нерухомим на місці, а текст ковзає поверх нього.
+   - background-attachment: local: Фонові зображення прив'язуються безпосередньо до вмісту елемента. 
+     Тому під час прокручування тексту всередині блоку фоновий патерн починає зміщуватися і 
+     рухатися вниз чи вгору синхронно разом із цим текстом.
+*/

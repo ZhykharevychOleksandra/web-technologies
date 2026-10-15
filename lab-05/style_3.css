@@ -1,0 +1,161 @@
+/* ===== Сторінка ===== */
+body {
+    margin: 0;
+    padding: 30px 10px;
+    background-color: #dcebe6;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #23403a;
+}
+
+/* Центральний блок (замість inline-стилю з лаб. №3) */
+.wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 30px 30px;
+    text-align: center;
+    background-color: #f5faf8;
+    border-radius: 12px;
+}
+
+/* ===== Заголовок ===== */
+h1 {
+    margin: 10px 0 25px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    font-weight: bold;
+    font-variant: small-caps;
+    letter-spacing: 3px;
+    color: #1b6b5a;
+    text-shadow: 2px 2px 0 #cfe3dc;
+}
+
+/* ===== Групи полів ===== */
+fieldset {
+    margin-bottom: 20px;
+    padding: 10px 20px 5px;
+    text-align: left;
+    background-color: #e8f3ef;
+    border: 2px solid #8dbfb1;
+    border-radius: 8px;
+}
+
+legend {
+    padding: 4px 14px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background-color: #1b6b5a;
+    border-radius: 6px;
+}
+
+/* ===== Підписи та підзаголовки питань ===== */
+label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #2d5a50;
+}
+
+/* підписи до radio / checkbox — звичайним накресленням */
+label input[type="radio"] + *,
+label:has(input[type="radio"]),
+label:has(input[type="checkbox"]) {
+    font-weight: normal;
+    color: #23403a;
+}
+
+b {
+    font-size: 16px;
+    color: #14503f;
+    text-decoration: underline;
+    text-decoration-color: #8dbfb1;
+    text-underline-offset: 3px;
+}
+
+/* Поля вводу*/
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 15px;
+    color: #23403a;
+    background-color: #ffffff;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[list],
+select,
+textarea {
+    width: 95%;
+    margin-top: 4px;
+    padding: 6px 8px;
+    border: 1px solid #8dbfb1;
+    border-radius: 4px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-style: italic;
+    color: #8aa59d;
+}
+
+/* фон поля при фокусі */
+input:focus,
+select:focus,
+textarea:focus {
+    background-color: #fffbe6;
+    outline: 2px solid #1b6b5a;
+}
+
+/* ===== Кнопки ===== */
+.buttons {
+    text-align: center;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    margin: 0 6px;
+    padding: 10px 22px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #1b6b5a;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+input[type="reset"] {
+    background-color: #7a8f8a;
+}
+
+input[type="submit"]:hover { background-color: #14503f; }
+input[type="reset"]:hover  { background-color: #5c706b; }
+
+/* ===== Посилання ===== */
+.back {
+    margin-top: 30px;
+}
+
+a {
+    font-weight: bold;
+    color: #1b6b5a;
+    text-decoration: none;
+    border-bottom: 1px dashed #1b6b5a;
+}
+
+a:hover {
+    color: #ffffff;
+    background-color: #1b6b5a;
+}

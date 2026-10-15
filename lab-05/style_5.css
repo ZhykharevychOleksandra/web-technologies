@@ -1,0 +1,94 @@
+/* Колірна гама: відтінки синього */
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f2f6f9;
+    font-family: Arial, sans-serif;
+    color: #0b3050;
+}
+
+h2 {
+    margin: 10px 20px;
+    color: #14507a;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* box-sizing */
+.part-1 div {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #14507a;
+    margin: 20px;
+    background-color: #bfe3f6;
+}
+
+.part-1 div:nth-of-type(1) {
+    box-sizing: content-box;
+    /* Загальна ширина: 300 + 2 * 20 + 2 * 5 = 350px */
+}
+
+.part-1 div:nth-of-type(2) {
+    box-sizing: border-box;
+    /* Загальна ширина: 300px (padding і border входять у width) */
+}
+
+/* ================= Частина 2. overflow ================= */
+.part-2 {
+    padding-bottom: 120px;      /* місце під текст, що виходить за межі при overflow: visible */
+}
+
+.part-2 div {
+    display: inline-block;
+    vertical-align: top;
+    width: 250px;
+    max-height: 80px;
+    border: 2px solid #1d6fa5;
+    margin: 20px;
+    background-color: #dff0fa;
+    font-size: 14px;
+}
+
+.part-2 div:nth-of-type(1) { overflow: visible; }
+.part-2 div:nth-of-type(2) { overflow: hidden; }
+.part-2 div:nth-of-type(3) { overflow: scroll; }
+.part-2 div:nth-of-type(4) { overflow: auto; }
+
+/* ================= Частина 3. display ================= */
+.part-3 ul {
+    list-style-type: none;      /* приховуємо маркери списку */
+    margin: 0 20px;
+    padding: 0;
+    background-color: #14507a;
+}
+
+.part-3 li {
+    display: inline-block;      /* пункти меню в ряд без float і flex */
+}
+
+.part-3 a {
+    display: block;             /* уся область з відступами клікабельна */
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    background-color: #1d6fa5;
+}
+
+.part-3 a:hover {
+    background-color: #33bbf1;
+}
+
+/* Приховуємо 4-й пункт меню ("Послуги").
+   display: none повністю вилучає елемент із відображення: він не займає
+   місця на сторінці, сусідні пункти зсуваються, а скринрідери його не озвучують.
+   Інші способи приховування поводяться інакше:
+   - visibility: hidden — елемент невидимий, але ЗАЛИШАЄ порожнє місце в потоці;
+   - opacity: 0 — елемент прозорий, але займає місце і може отримувати кліки;
+   - position: absolute з великим від'ємним left — елемент просто «виноситься» за екран. */
+.part-3 li:nth-child(4) {
+    display: none;
+}

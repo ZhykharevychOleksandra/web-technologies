@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №5 - Завдання 5</title>
+    <!-- Підключення єдиної таблиці стилів -->
+    <link rel="stylesheet" href="style_5.css">
+</head>
+<body>
+
+    <!-- Частина 1: box-sizing -->
+    <section class="demo-box-sizing">
+        <h2>1. Демонстрація властивості box-sizing</h2>
+        <div>
+            <strong>box-sizing: content-box</strong><br>
+            Задана ширина (width): 300px.<br>
+            Внутрішні відступи (padding): 20px з обох сторін (+40px).<br>
+            Рамка (border): 5px з обох сторін (+10px).<br>
+            <strong>Загальна реальна ширина блоку: 350px.</strong>
+        </div>
+        <div>
+            <strong>box-sizing: border-box</strong><br>
+            Задана ширина (width): 300px.<br>
+            Внутрішні відступи та рамки "втиснуті" всередину блоку.<br>
+            <strong>Загальна реальна ширина блоку: 300px.</strong>
+        </div>
+    </section>
+
+    <!-- Частина 2: overflow -->
+    <section class="demo-overflow">
+        <h2>2. Демонстрація властивості overflow</h2>
+        
+        <div>
+            <strong>overflow: visible;</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        
+        <div>
+            <strong>overflow: hidden;</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        
+        <div>
+            <strong>overflow: scroll;</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        
+        <div>
+            <strong>overflow: auto;</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+    </section>
+
+    <!-- Частина 3: display -->
+    <section class="demo-display">
+        <h2>3. Демонстрація властивості display (Горизонтальне меню)</h2>
+        <ul>
+            <li><a href="#">Головна</a></li>
+            <li><a href="#">Новини</a></li>
+            <li><a href="#">Прихований пункт</a></li>
+            <li><a href="#">Галерея</a></li>
+            <li><a href="#">Контакти</a></li>
+        </ul>
+    </section>
+
+</body>
+</html>

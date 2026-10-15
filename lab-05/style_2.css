@@ -1,0 +1,70 @@
+/* Одна колірна гама (червоно-бордова): від найсвітлішого до найтемнішого
+   #F2DCDB  найсвітліший
+   #E6B8B7
+   #D99694
+   #BE524E
+   #923535
+   #632322  найтемніший
+*/
+
+body {
+    margin: 20px;
+    background-color: white;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Таблиця */
+table {
+    width: 900px;
+    border-collapse: separate;
+    border-spacing: 2px;          /* білі «рамки» між клітинками */
+    background-color: white;
+    table-layout: fixed;
+    text-align: center;
+}
+
+th, td {
+    padding: 0;
+    height: 78px;
+    font-size: 26px;
+    vertical-align: middle;
+}
+
+/* Шапка */
+thead th {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.25;
+    height: 90px;
+}
+
+/* перша клітинка шапки — найсвітліша */
+thead th:first-child {
+    background-color: #F2DCDB;
+    font-size: 20px;
+}
+
+/* тарифи — від світлого до темного */
+thead th:nth-child(2) { background-color: #E6B8B7; }
+thead th:nth-child(3) { background-color: #D99694; }
+thead th:nth-child(4) { background-color: #923535; }
+thead th:nth-child(5) { background-color: #632322; }
+
+/* ---------- Тіло таблиці ---------- */
+/* чергування рядків працює для будь-якої кількості рядків */
+tbody tr:nth-child(odd) td  { background-color: #E6B8B7; }
+tbody tr:nth-child(even) td { background-color: #F2DCDB; }
+
+tbody td {
+    color: #333;
+}
+
+/* перший стовпець — темний, поверх чергування */
+tbody tr:nth-child(n) td:first-child {
+    background-color: #BE524E;
+    color: white;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
