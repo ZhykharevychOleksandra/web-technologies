@@ -52,8 +52,6 @@ body {
     visibility: hidden;
 }
 
-/* ЛОГІКА ВЗАЄМОДІЇ ЧЕРЕЗ CSS: */
-
 /* 1. При наведенні на лівий Блок 1 -> з'являється синій Блок 2 */
 .left-block:hover + .center-block {
     opacity: 1;

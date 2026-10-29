@@ -11,7 +11,7 @@ body {
     overflow: hidden;
 }
 
-/* 1. СІРИЙ ФОН ВІДЖЕТА (Тепер він фіксованого великого розміру, а не на весь екран) */
+/* 1. Сірий фон віджета (Тепер він фіксованого великого розміру, а не на весь екран) */
 .weather-widget-container {
     position: relative;
     width: 650px;
@@ -73,7 +73,7 @@ body {
     letter-spacing: -3px;
 }
 
-/* 4. НОВА ОБ'ЄМНА CSS-ХМАРИНКА (Реалістичний ефект туману без емодзі) */
+/* 4. Нова об'ємна CSS-ХМАРИНКА (Реалістичний ефект туману без емодзі) */
 .css-cloud {
     position: absolute;
     top: 90px;
@@ -95,7 +95,7 @@ body {
 .part-2 { width: 160px; height: 160px; bottom: 20px; left: 60px; }
 .part-3 { width: 110px; height: 110px; bottom: 0; left: 160px; }
 
-/* 5. ЗАДНІЙ ШАР: Світла панель прогнозу на тиждень */
+/* 5. Задній шар: Світла панель прогнозу на тиждень */
 .forecast-panel {
     position: absolute;
     bottom: 35px;
