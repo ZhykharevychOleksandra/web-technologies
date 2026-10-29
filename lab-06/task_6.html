@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 6 - Завдання 6</title>
+    <link rel="stylesheet" href="style_6.css">
+</head>
+<body>
+
+    <header class="google-header">
+        <span class="header-link">Mail</span>
+        <span class="header-link">Images</span>
+        
+        <!-- Головний тригер (Чекбокс доступний для Tab, але візуально прихований) -->
+        <div class="popup-trigger-wrapper">
+            <input type="checkbox" id="popup-toggle" class="state-checkbox">
+            <label for="popup-toggle" class="popup-button" aria-label="Додатки Google">
+                <span class="grid-icon"></span>
+            </label>
+            
+            <!-- КОНТЕЙНЕР ПОПАПУ -->
+            <div class="popup-container">
+                
+                <!-- Внутрішній тригер для More (Доступний для Tab) -->
+                <input type="checkbox" id="more-toggle" class="state-checkbox-more">
+                
+                <!-- Прокручувана зона -->
+                <div class="popup-content" tabindex="0">
+                    <div class="icons-grid">
+                        <button class="icon-item" tabindex="0">📅 <span>Calendar</span></button>
+                        <button class="icon-item" tabindex="0">✉️ <span>Mail</span></button>
+                        <button class="icon-item" tabindex="0">📰 <span>News</span></button>
+                        <button class="icon-item" tabindex="0">🗺️ <span>Map</span></button>
+                        <button class="icon-item" tabindex="0">📂 <span>Files</span></button>
+                        <button class="icon-item" tabindex="0">👥 <span>Contacts</span></button>
+                        <button class="icon-item" tabindex="0">🗣️ <span>Translate</span></button>
+                        <button class="icon-item" tabindex="0">▶️ <span>Videos</span></button>
+                        <button class="icon-item" tabindex="0">🔍 <span>Search</span></button>
+                    </div>
+                    
+                    <div class="icons-grid extended-icons">
+                        <button class="icon-item" tabindex="0">🖼️ <span>Photos</span></button>
+                        <button class="icon-item" tabindex="0">🌐 <span>Apps</span></button>
+                        <button class="icon-item" tabindex="0">📄 <span>Documents</span></button>
+                        <button class="icon-item" tabindex="0">💬 <span>Chat</span></button>
+                        <button class="icon-item" tabindex="0">🏫 <span>Classroom</span></button>
+                        <button class="icon-item" tabindex="0">⭐ <span>Collection</span></button>
+                        <button class="icon-item" tabindex="0">🔴 <span>Mars</span></button>
+                        <button class="icon-item" tabindex="0">📝 <span>Blogs</span></button>
+                        <button class="icon-item" tabindex="0">📢 <span>Promos</span></button>
+                        
+                        <div class="kottans-footer">Even more from Kottans</div>
+                    </div>
+                </div>
+                
+                <!-- Кнопка More пов'язана з внутрішнім чекбоксом -->
+                <label for="more-toggle" class="more-button">
+                    <span class="text-more">More</span>
+                    <span class="text-less">Less</span>
+                </label>
+                
+            </div>
+        </div>
+        
+        <span class="bell-icon">🔔</span>
+        <div class="user-avatar">👤</div>
+    </header>
+
+</body>
+</html>

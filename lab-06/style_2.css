@@ -1,0 +1,68 @@
+/* Базове обнулення */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Батьківський контейнер */
+.wrapper {
+    display: flex;
+    align-items: flex-end; /* Вирівнювання зелених блоків по нижній лінії */
+    gap: 15px;
+    height: 180px; /* Висота підлаштована під високий синій блок */
+    padding: 20px;
+}
+
+/* Спільні стилі для елементів */
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Плавність анімації */
+}
+
+/* Стилі для зелених Блоків 1 */
+.block-green {
+    background-color: #00a843;
+    color: #000;
+    width: 100px;
+    height: 35px;
+}
+
+/* Стилі для синього Блоку 2 */
+.block-blue {
+    background-color: #4a86e8;
+    color: #fff;
+    width: 120px;
+    height: 140px;
+    padding: 10px;
+    
+    /* Спочатку приховуємо блок відповідно до підказки */
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ЛОГІКА ВЗАЄМОДІЇ ЧЕРЕЗ CSS: */
+
+/* 1. При наведенні на лівий Блок 1 -> з'являється синій Блок 2 */
+.left-block:hover + .center-block {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 2. При наведенні на правий Блок 1 -> зникає лівий Блок 1 */
+/* (Використовуємо батьківський hover у комбінації з ховером на правому блоці) */
+.wrapper:has(.right-block:hover) .left-block {
+    opacity: 0;
+    visibility: hidden;
+}

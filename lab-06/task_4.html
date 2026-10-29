@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 6 - Завдання 4</title>
+    <link rel="stylesheet" href="style_4.css">
+</head>
+<body>
+
+    <!-- 1. ГОРИЗОНТАЛЬНА НАВІГАЦІЙНА ПАНЕЛЬ (FIXED/STICKY) -->
+    <nav class="nav-horizontal">
+        <ul class="menu-h">
+            <li class="active">
+                <a href="#">🏠 Головна</a>
+                <!-- Випадне меню 2-го рівня -->
+                <ul class="submenu">
+                    <li><a href="#">Головна новина</a></li>
+                    <li><a href="#">Архів статей</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">ℹ️ Про нас</a>
+                <ul class="submenu">
+                    <li><a href="#">Про кафедру</a></li>
+                    <li><a href="#">Про університет</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">🎓 Навчання</a>
+                <ul class="submenu">
+                    <li><a href="#">Бакалаврат</a></li>
+                    <li><a href="#">Магістратура</a></li>
+                    <li><a href="#">Аспірантура</a></li>
+                </ul>
+            </li>
+            <!-- Останній пункт меню, вирівняний справа за допомогою float -->
+            <li class="menu-right">
+                <a href="#">👤 Кабінет</a>
+                <ul class="submenu">
+                    <li><a href="#">Профіль</a></li>
+                    <li><a href="#">Налаштування</a></li>
+                    <li><a href="#">Вихід</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 2. ВЕРТИКАЛЬНА НАВІГАЦІЙНА ПАНЕЛЬ (ПОВНА ВИСОТА) -->
+    <aside class="nav-vertical">
+        <ul class="menu-v">
+            <li class="active">
+                <a href="#">
+                    <span>📊 Панель</span>
+                </a>
+            </li>
+            <li class="has-children">
+                <a href="#">
+                    <span>📁 Ресурси</span>
+                </a>
+                <!-- Рівень 2 -->
+                <ul class="submenu-v-l2">
+                    <li><a href="#">Документи</a></li>
+                    <li class="has-children">
+                        <a href="#">Медіафайли ➔</a>
+                        <!-- Рівень 3 (Три рівні вкладеності за ТЗ) -->
+                        <ul class="submenu-v-l3">
+                            <li><a href="#">Зображення</a></li>
+                            <li><a href="#">Відеоуроки</a></li>
+                            <li><a href="#">Презентації</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"> Специфікації</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <span>⚙️ Опції</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Основний контент сторінки -->
+    <main class="content-area">
+        <h1>Демонстрація меню (Завдання 4)</h1>
+        <p>Скрольте сторінку вниз, щоб побачити фіксацію верхньої панелі.</p>
+        <div class="spacer"></div>
+        
+        <!-- Демонстрація Sticky-панелі всередині контенту -->
+        <div class="sticky-box-wrapper">
+            <div class="nav-sticky">
+                📌 Локальна липка панель навігації (Sticky меню)
+            </div>
+            <p style="padding: 20px; color: #666;">Цей блок прилипне до верху, поки ви скролите цей текстовий блок.</p>
+            <div class="small-spacer"></div>
+        </div>
+        
+        <div class="spacer"></div>
+    </main>
+
+</body>
+</html>

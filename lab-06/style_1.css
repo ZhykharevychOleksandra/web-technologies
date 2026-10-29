@@ -1,0 +1,57 @@
+/* Базові стилі для обнулення відступів */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+/* Батьківський контейнер */
+.container {
+    position: relative; /* Важливо для абсолютного позиціонування синього блоку всередині */
+    display: flex;
+    gap: 15px; /* Невеличкий проміжк між зеленими блоками, як на скріншоті */
+    padding: 20px;
+}
+
+/* Спільні стилі для всіх трьох блоків */
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Стилі для зелених блоків */
+.green-block {
+    width: 250px;
+    height: 140px;
+    background-color: #00a843; /* Насичений зелений колір */
+    color: #000000; /* Чорний текст */
+    align-items: flex-start; /* Текст зміщений до верхньої частини */
+    padding-top: 15px;
+}
+
+/* Стилі для центрального синього блоку */
+.blue-block {
+    position: absolute;
+    width: 280px;
+    height: 55px;
+    background-color: #4a86e8; /* Синій/блакитний колір */
+    color: #ffffff; /* Білий текст */
+    
+    /* Центрування по вертикалі та горизонталі всередині .container */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Керування шарами: робимо його вищим за зелені блоки */
+    z-index: 10; 
+}
